@@ -2,7 +2,7 @@ import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
 import createEmotionServer from '@emotion/server/create-instance';
-import theme from '../src/theme';
+import theme from '../src/ui/Theme';
 import { cache } from './_app.js';
 
 const { extractCritical } = createEmotionServer(cache);
@@ -16,8 +16,14 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            href="https://fonts.googleapis.com/css?family=Pacifico|Raleway:100,400,400i,700|Roboto:300,400,500,700&display=swap"
           />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content="https://i.imgur.com/C8evBTM.png" />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content="company logo" />
         </Head>
         <body>
           <Main />
